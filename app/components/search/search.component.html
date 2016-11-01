@@ -1,0 +1,29 @@
+<div class="jumbotron specialjum">
+	<div class="container">
+		<h1>Hello, welcome to Arkansas Trails</h1>
+		<p>Arkansas Trails allows you to search a destination in Arkansas to pull up potential outdoor activities.</p>
+		<p><a routerLink="about" class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+	</div>
+	<div class="container">
+	<div class="row">
+			<form class="header-form">
+				<div class="form-group form-group-lg">
+					<input type="text" class="form-control" placeholder="Enter your Destination in Arkansas..." [(ngModel)]="searchStr" name="searchStr" (keydown.enter)="searchCity()">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div *ngIf="searchRes">
+    <div *ngFor="let place of searchRes">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="search-res well">
+					<h2>{{place.name}}</h2>
+					<h4>near {{place.city}}, {{place.state}}</h4>
+					<h4 class="explore"><a class="btn btn-info" *ngFor="let id of place.activities" routerLink="/places/{{id.unique_id}}">Explore</a></h4>
+                </div>    
+            </div>    
+        </div> 
+    </div>    
+</div>
