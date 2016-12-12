@@ -8,6 +8,7 @@ import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AboutComponent } from './components/about/about.component';
 import { UserComponent } from './components/user/user.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import {routing} from './app.routing';
@@ -19,7 +20,7 @@ import {Auth} from './services/auth.service';
       apiKey: 'AIzaSyAzfTfmV81lTnQlYFoFJdMUFn07jV5jHmU'
     })
   ],
-  declarations: [ AppComponent, ProfileComponent, SearchComponent, NavbarComponent, AboutComponent, UserComponent, ContactComponent],
+  declarations: [ AppComponent, ProfileComponent, SearchComponent, NavbarComponent, AboutComponent, UserComponent, ContactComponent, FooterComponent],
   bootstrap: [ AppComponent ],
   providers: [AUTH_PROVIDERS, Auth]
 })
